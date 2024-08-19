@@ -12,7 +12,7 @@ html {
 
 /* Body Styling */
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: 'Helvetica';
     color: #41a48b; /* Mörkgrön text */
     background-color: #FFFFFF; /* Vit bakgrund */
 }
@@ -41,6 +41,13 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin-left: 40px;
+}
+
+/* Logo styling */
+.logo img {
+    height: 50px; /* Justera höjden på loggan */
+    width: auto;  /* Bibehåller bildens proportioner */
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-menu {
@@ -97,29 +104,37 @@ body {
 }
 
 .mobile-menu {
-    display: none;
     position: fixed;
-    top: 60px;
-    right: 0;
+    top: 0;
+    right: -100%; /* Justerat till höger */
     background-color: #ffffff;
     width: 100%;
-    height: 50%;
-    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
     z-index: 1001;
-    padding: 0px;
+    padding: 20px;
     text-align: center;
     overflow-y: auto;
+    transition: right 0.3s ease-in-out; /* Flytta ut från höger */
 }
 
 .mobile-menu.active {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    right: 0;
+}
+
+.close-menu {
+    font-size: 36px;
+    font-weight: bold;
+    color: #173a31;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
 }
 
 .mobile-menu ul {
     list-style: none;
     padding: 0;
+    margin-top: 50px; /* Justerat för att ge plats åt close-menu */
 }
 
 .mobile-menu ul li {
@@ -130,7 +145,7 @@ body {
     color: #173a31;
     font-size: 24px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .nav-button.mobile {
@@ -141,10 +156,11 @@ body {
     border-radius: 25px;
     padding: 10px 20px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px; /* Samma storlek som menyalternativen */
     font-weight: normal;
     border: 2px solid #41a48b;
 }
+
 .nav-button.mobile:hover {
     background-color: #FFFFFF;
     color: #41a48b; /* Mörkgrön text vid hover */
@@ -206,7 +222,7 @@ body {
 
 /* White Section */
 .white-section {
-    padding: 120px 120px;
+    padding: 160px 120px;
     background-color: #FFFFFF; /* Vit bakgrund */
     color: #173a31; /* Mörkgrön text */
     text-align: left;
@@ -280,18 +296,16 @@ body {
     text-align: left;
 }
 
-.footer-left a.footer-logo {
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #FFFFFF; /* Vit logotext */
-    display: block;
-    margin-bottom: 10px;
+.footer-logo-img {
+    height: 50px; /* Justera höjden på loggan i footern */
+    width: auto;  /* Bibehåller bildens proportioner */
+    margin-bottom: 20px;
 }
 
 .footer-left p {
     margin: 5px 0;
     line-height: 1.6;
+    font-weight: 300;
 }
 
 .footer-left a {
@@ -299,10 +313,9 @@ body {
     text-decoration: none;
 }
 
-.footer-middle h4 {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: bold;
+.footer-middle h2,
+.footer-right ul li:first-child {
+    margin-bottom: 10px; /* Ökat radavstånd nedåt från rubriker */
 }
 
 .footer-middle ul,
@@ -323,31 +336,20 @@ body {
     font-weight: 300;
 }
 
-/* "Mina Sidor"-knapp i footern */
-.footer-right .footer-button {
-    background-color: #fff; /* Vit bakgrund */
-    border: 2px solid #fff;
-    color: #41a48b !important; /* Mörkgrön text */
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 18px;
+/* "Journummer" styling */
+.footer-right ul li:first-child {
+    font-size: 24px;
     font-weight: normal;
-    border-radius: 25px;
-    transition: background-color 0.3s, color 0.3s, border 0.3s;
-    margin-bottom: 20px; /* För att skapa utrymme nedanför knappen */
+    margin-bottom: 5px;
 }
 
-.footer-right .footer-button:hover {
-    background-color: transparent; /* Genomskinlig bakgrund vid hover */
-    color: #fff !important; /* Vit text vid hover */
-    border: 2px solid #fff;
+.footer-right ul li:last-child {
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 0;
 }
 
-.journummer {
-    margin-top: 40px; /* För att öka utrymmet ovanför "Journummer" */
-    margin-bottom: 40px; /* För att skapa utrymme nedanför knappen */
-}
-
+/* Footer bottom */
 .footer-bottom {
     text-align: center;
     border-top: 1px solid #FFFFFF; /* Vit linje */
@@ -356,10 +358,16 @@ body {
     font-size: 14px;
 }
 
+/* Kundservice link styling */
+.link {
+    color: #173a31;
+    text-decoration: underline;
+}
+
 /* Våra Fastigheter Section */
 .properties-section {
     background-color: #fff; /* Vit bakgrund */
-    padding: 80px 120px;
+    padding: 160px 120px;
     text-align: left;
 }
 
@@ -409,7 +417,7 @@ body {
 .service-section {
     background-color: #FFFFFF; /* Vit bakgrund */
     color: #173a31; /* Mörkgrön text */
-    padding: 80px 120px;
+    padding: 160px 120px;
     text-align: left;
 }
 
@@ -452,7 +460,7 @@ body {
     background-color: #41a48b; /* Mörkgrön bakgrund */
     text-decoration: none;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: normal;
     margin-top: 20px;
     border-radius: 25px;
     transition: background-color 0.3s, color 0.3s, border 0.3s;
@@ -466,7 +474,7 @@ body {
 
 /* Om grnbck home Section */
 .about-section {
-    padding: 80px 120px;
+    padding: 160px 120px;
     background-color: #FFFFFF;
     color: #173a31; /* Mörkgrön text */
     text-align: center;
@@ -509,16 +517,23 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .menu-icon {
-        display: flex;
+    .white-section,
+    .properties-section,
+    .service-section,
+    .about-section {
+        padding: 140px 40px; /* Minskad padding för mobilversionen */
     }
 
     .nav-menu {
-        display: none;
+        display: none; /* Dölj den vanliga menyn */
     }
 
     .nav-button.right {
-        display: none;
+        display: none; /* Dölj "Mina Sidor"-knappen i mobilversionen */
+    }
+
+    .menu-icon {
+        display: flex; /* Visa hamburgermenyn */
     }
 
     .properties-gallery {
@@ -528,21 +543,22 @@ body {
     .property-item {
         flex: 1 1 100%;
     }
-}
-.logo img {
-    height: 50px; /* Justera höjden på loggan */
-    width: auto;  /* Bibehåller bildens proportioner */
-}
-/* Standard logga */
-.logo img {
-    height: 50px;
-    width: auto;
-    transition: all 0.3s ease-in-out;
-}
 
-/* Logga som visas när navbaren skrollas */
-.navbar.scrolled .logo img {
-    content: url('logo 2.jpg');
-    height: 50px; /* Justera om du vill ha en annan storlek på logga 2 */
-    width: auto;
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left,
+    .footer-middle,
+    .footer-right {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-left h2,
+    .footer-middle h2,
+    .footer-right ul li:first-child {
+        margin-bottom: 10px; /* Minska radavstånd för mobilversionen */
+    }
 }
