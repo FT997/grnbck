@@ -12,8 +12,8 @@
     <!-- Navigation Bar -->
     <header>
       <nav class="navbar">
-        <a href="#" class="logo"
-          ><img src="logo.jpg" alt="grnbck home logo"
+        <a href="#" class="logo" id="scroll-to-top"
+          ><img src="logo.jpg" alt="grnbck home logo" id="navbar-logo"
         /></a>
         <div class="menu-icon" id="menu-icon">
           <div class="bar"></div>
@@ -37,6 +37,7 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
+      <span class="close-menu" id="close-menu">&times;</span>
       <ul>
         <li><a href="#sok-ledigt">Sök ledigt</a></li>
         <li><a href="#vara-fastigheter">Våra fastigheter</a></li>
@@ -55,7 +56,9 @@
     <section class="hero">
       <div class="hero-text">
         <h1>Välkommen till grnbck home</h1>
-        <a href="mailto:rent@grnbckhome.se" class="hero-button"
+        <a
+          href="mailto:rent@grnbckhome.se?subject=Intresseanmälan för bostad&body=Vilken%20typ%20av%20lägenhet%20önskar?%0A%0AAntal%20rum%20och%20kök%20(intervall):%0AStad:%0AOmråde:%0AMaxhyra%20per%20månad:"
+          class="hero-button"
           >Ställ dig i vår bostadskö</a
         >
       </div>
@@ -66,18 +69,22 @@
       <div class="white-content">
         <h2>Sök lediga lägenheter</h2>
         <p>
-          Är du intresserad av att bo i en av våra centrala och välplanerade
-          lägenheter? Här kan du se alla våra lediga lägenheter just nu. Lediga
-          lägenheter publiceras löpande - så se till att hålla koll här!
+          Vill du bo i en av våra centralt belägna och välplanerade lägenheter?
+          Här hittar du alla våra tillgängliga lägenheter just nu. Nya
+          lägenheter läggs upp kontinuerligt, så håll utkik regelbundet!
         </p>
         <p>
-          Du kan även välja att prenumerera på lediga lägenheter. Då får du ett
-          mejl så fort vi har en ledig bostad som matchar just dina önskemål.
+          Du kan också prenumerera på uppdateringar om lediga lägenheter. Då får
+          du ett mejl direkt när en bostad som matchar dina önskemål blir
+          tillgänglig.
         </p>
-        <a href="mailto:rent@grnbckhome.se" class="cta-button"
+        <a
+          href="mailto:rent@grnbckhome.se?subject=Intresseanmälan för bostad&body=Vilken%20typ%20av%20lägenhet%20önskar?%0A%0AAntal%20rum%20och%20kök%20(intervall):%0AStad:%0AOmråde:%0AMaxhyra%20per%20månad:"
+          class="cta-button"
           >Ställ dig i vår bostadskö</a
         >
       </div>
+      <div id="homeq-anchor" data-company="3"></div>
     </section>
 
     <!-- First Image Section -->
@@ -88,12 +95,12 @@
       <div class="properties-content">
         <h2>Våra fastigheter</h2>
         <p>
-          Vi förvaltar i dagsläget 8 fastigheter och i vårt bestånd finns totalt
-          91 lägenheter. Vi strävar efter att kontinuerligt modernisera våra
-          bostadshus genom uppgraderingar, installation av effektiva
-          energisystem och smart teknik. Med hjälp av dessa åtgärder har vi som
-          målsättning att ligga i framkant utifrån hållbarhet och erbjuda
-          trivsamma hem till våra hyresgäster.
+          Vi förvaltar för närvarande 8 fastigheter med totalt 91 lägenheter.
+          Vårt mål är att arbeta proaktivt för att modernisera våra bostäder
+          genom uppgraderingar, installation av effektiva energisystem och
+          införande av smart teknik. Genom dessa åtgärder strävar vi efter att
+          vara i framkant vad gäller hållbarhet och att erbjuda trivsamma och
+          moderna hem för våra hyresgäster.
         </p>
         <div class="properties-gallery">
           <div class="property-item">
@@ -163,57 +170,27 @@
     <section id="kundservice" class="service-section">
       <div class="service-content">
         <h2>Kundservice</h2>
+        <h3>Inflytt</h3>
         <h3>Felanmälan & jour</h3>
         <p>
-          För att göra en felanmälan loggar du in på Mina sidor och klickar på
-          felanmälan. Här beskriver du felet samt laddar upp eventuella bilder
-          som förklaring. Du kan följa din felanmälans status på Mina sidor. Du
-          kan även felanmäla exempelvis trapphuset, miljörummet eller andra
-          gemensamma ytor.
+          För att göra en felanmälan loggar du in på
+          <a
+            href="https://hem.dinhyresvard.se/login"
+            target="_blank"
+            class="link"
+            >www.dinhyresvard.se</a
+          >
+          med den aktiveringskod du fick tillsammans med din första faktura. När
+          du är inloggad, klickar du på "Felanmälan" och beskriver problemet
+          samt laddar upp eventuella bilder som förklaring. Du kan även följa
+          statusen för din felanmälan på Mina sidor.
         </p>
         <p>
-          Vi har olika prioritet på felanmälningarna som du kan se nedan.
-          Vänligen säkerställ att du läser igenom stegen nedan och försöker lösa
-          problemet själv innan du gör en felanmälan. Om du gör en felanmälan
-          utan att ha följt instruktionen först, kommer vi debitera dig för
-          material och tidsåtgång.
-        </p>
-        <h3>Prioritering av ärenden</h3>
-        <p>
-          Vi arbetar alltid för att hjälpa dig så fort vi bara kan. En del
-          ärenden är mer akuta än andra och därför definierar vi här när du kan
-          förvänta dig återkoppling från oss.
-        </p>
-        <h4>Prio 1 – Akuta ärenden</h4>
-        <p>
-          Återkopplas inom 24 timmar från att ärendet har rapporterats. Det är
-          åtgärder som behöver göras för att säkerställa hälsa och säkerhet
-          eller för att förhindra skador på byggnaden.
-        </p>
-        <h4>Prio 2 – Brådskande ärenden</h4>
-        <p>
-          Återkopplas inom fem arbetsdagar från att det anmälts. Detta är
-          åtgärder som väsentligt påverkar komfort och bekvämlighet hos de
-          boende.
-        </p>
-        <h4>Prio 3 – Icke brådskande</h4>
-        <p>
-          Återkopplas inom 28 dagar från att de rapporterats. Detta är åtgärder
-          som inte passar in i någon av de övre kategorierna.
-        </p>
-        <h3>Jour – Akuta ärenden utanför kontorstid</h3>
-        <p>
-          Om det inträffar något akut i din lägenhet eller fastighet efter
-          kontorstid, t ex på helgen kan du kontakta jouren på telefonnummer
+          Om det inträffar något akut i din lägenhet eller fastigheten efter
+          kontorstid, t.ex på helgen kontaktar du jouren på telefonnummer
           000-000 00 00.
         </p>
-        <h4>Viktigt att veta!</h4>
-        <p>
-          Jouren är tänkt för akuta ärenden så som stigande stopp i avloppet
-          eller ett vattenläckage. Om ditt ärende inte är akut som till exempel
-          att spisen inte fungerar, du har en trasig lampa i kylen eller vattnet
-          rinner långsamt i avloppet, får du själv bekosta utryckningskostnaden.
-        </p>
+        <h3>Utflytt</h3>
       </div>
     </section>
 
@@ -227,7 +204,8 @@
         <p>
           grnbck home är ett fastighetsbolag med fokus på långsiktigt ägande och
           förvaltning av hyreslägenheter. Vi erbjuder bostäder i utvalda
-          universitet- och högskoleorter.
+          universitet- och högskoleorter. Målet är att bedriva en förvaltning
+          som fokuserar på hållbarhet och trivsam boendemiljö.
         </p>
       </div>
       <div class="about-image"></div>
@@ -237,7 +215,8 @@
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-left">
-          <a href="#top" class="footer-logo">grnbck home</a>
+          <img src="logo.jpg" alt="grnbck home logo" class="footer-logo-img" />
+          <h2>grnbck home</h2>
           <p>Malmskillnadsgatan 36<br />111 57 Stockholm</p>
           <p>
             <a href="mailto:kontakt@grnbckhome.se">kontakt@grnbckhome.se</a>
@@ -245,12 +224,19 @@
         </div>
 
         <div class="footer-middle">
+          <h2>Meny</h2>
           <ul>
             <li><a href="#sok-ledigt">Sök ledigt</a></li>
             <li><a href="#vara-fastigheter">Våra fastigheter</a></li>
             <li><a href="#kundservice">Kundservice</a></li>
             <li><a href="#om-grnbck-home">Om grnbck home</a></li>
-            <li class="journummer">Journummer: 000-000 00 00</li>
+          </ul>
+        </div>
+
+        <div class="footer-right">
+          <ul>
+            <li><strong>Journummer</strong></li>
+            <li>000-000 00 00</li>
           </ul>
         </div>
       </div>
@@ -262,39 +248,60 @@
 
     <!-- JavaScript for Mobile Menu -->
     <script>
-      const menuIcon = document.getElementById("menu-icon");
-      const mobileMenu = document.getElementById("mobile-menu");
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuIcon = document.getElementById("menu-icon");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenu = document.getElementById("close-menu");
+        const navLinks = document.querySelectorAll(".mobile-menu ul li a");
+        const navbarLogo = document.getElementById("navbar-logo");
 
-      menuIcon.addEventListener("click", () => {
-        mobileMenu.classList.toggle("active");
-      });
+        menuIcon.addEventListener("click", () => {
+          mobileMenu.classList.add("active");
+        });
 
-      window.addEventListener("scroll", function () {
-        const navbar = document.querySelector(".navbar");
-        const whiteSection = document.querySelector(".white-section");
-        const whiteSectionPosition = whiteSection.getBoundingClientRect().top;
-
-        if (window.scrollY >= whiteSectionPosition) {
-          navbar.classList.add("scrolled");
-          document.querySelectorAll(".nav-menu li a").forEach(function (item) {
-            item.style.color = "#173a31";
-          });
-        } else {
-          navbar.classList.remove("scrolled");
-          document.querySelectorAll(".nav-menu li a").forEach(function (item) {
-            item.style.color = "#FFFFFF";
-          });
-        }
-      });
-
-      // Close mobile menu when clicking outside of it
-      document.addEventListener("click", function (event) {
-        if (
-          !mobileMenu.contains(event.target) &&
-          !menuIcon.contains(event.target)
-        ) {
+        closeMenu.addEventListener("click", () => {
           mobileMenu.classList.remove("active");
-        }
+        });
+
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.remove("active");
+          });
+        });
+
+        document
+          .getElementById("scroll-to-top")
+          .addEventListener("click", (e) => {
+            e.preventDefault();
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          });
+
+        window.addEventListener("scroll", function () {
+          const navbar = document.querySelector(".navbar");
+          const whiteSection = document.querySelector(".white-section");
+          const whiteSectionPosition = whiteSection.getBoundingClientRect().top;
+
+          if (window.scrollY >= whiteSectionPosition) {
+            navbar.classList.add("scrolled");
+            navbarLogo.src = "logo 2.jpg"; // Change to "logo-2.jpg"
+            document
+              .querySelectorAll(".nav-menu li a")
+              .forEach(function (item) {
+                item.style.color = "#173a31";
+              });
+          } else {
+            navbar.classList.remove("scrolled");
+            navbarLogo.src = "logo.jpg"; // Revert to original logo
+            document
+              .querySelectorAll(".nav-menu li a")
+              .forEach(function (item) {
+                item.style.color = "#FFFFFF";
+              });
+          }
+        });
       });
     </script>
   </body>
