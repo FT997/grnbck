@@ -140,10 +140,11 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="top"></div>
     <!-- Navigation Bar -->
     <header>
       <nav class="navbar">
-        <a href="#" class="logo" id="scroll-to-top">
+        <a href="#top" class="logo" id="scroll-to-top">
           <img src="logo.jpg" alt="grnbck home logo" id="navbar-logo" />
         </a>
         <div class="menu-icon" id="menu-icon">
@@ -420,9 +421,25 @@
       src="https://widgets.homeq.se/widgets/overview.js"
     ></script>
 
-    <!-- JavaScript for Mobile Menu -->
+    <!-- JavaScript for Mobile Menu and Scroll-to-Top -->
     <script async>
       document.addEventListener("DOMContentLoaded", function () {
+        // Om hash-värdet inte är "#top", omdirigera till toppen
+        if (window.location.hash !== "#top") {
+          window.location.hash = "#top";
+        }
+
+        // Klick för att scrolla till toppen
+        document
+          .getElementById("scroll-to-top")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            document.getElementById("top").scrollIntoView({
+              behavior: "smooth",
+            });
+          });
+
+        // Din övriga JavaScript-kod, som för den mobila menyn och navbar-scroll-effekten
         const menuIcon = document.getElementById("menu-icon");
         const mobileMenu = document.getElementById("mobile-menu");
         const closeMenu = document.getElementById("close-menu");
@@ -442,16 +459,6 @@
             mobileMenu.classList.remove("active");
           });
         });
-
-        document
-          .getElementById("scroll-to-top")
-          .addEventListener("click", (e) => {
-            e.preventDefault();
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            });
-          });
 
         window.addEventListener("scroll", function () {
           const navbar = document.querySelector(".navbar");
