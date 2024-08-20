@@ -462,9 +462,10 @@ body {
     text-decoration: none;
     font-size: 18px;
     font-weight: normal;
-    margin-top: 20px;
+    margin-top: 40px;
     border-radius: 25px;
     transition: background-color 0.3s, color 0.3s, border 0.3s;
+    margin-bottom: 60px;
 }
 
 .cta-button:hover {
@@ -576,4 +577,90 @@ body {
 .no-style-phone:focus,
 .no-style-phone:active {
     color: inherit; /* Behåll samma färg vid hover, fokus och aktivt tillstånd */
+}
+/* Anpassning av HomeQ-widgeten */
+
+/* Bakgrundsfärg för hela widgeten */
+#homeq-web-widget,
+#homeq-web-widget > div,
+#homeq-web-widget > div > div,
+#homeq-web-widget .widget-bg-color {
+    background-color: #FFFFFF !important; /* Vit bakgrund för hela widgeten */
+}
+
+/* Stil för etiketten "Kommun" med ökad marginal nedåt */
+#homeq-web-widget .widget-label {
+    font-family: 'Helvetica' !important;
+    color: #173a31 !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    margin-bottom: 40px !important; /* Ökat radavstånd nedåt */
+    padding-left: 10px !important;
+}
+
+/* Stil för dropdown-menyn, inklusive "Alla" */
+#homeq-web-widget .homeq-select,
+#homeq-web-widget select {
+    font-family: 'Helvetica', sans-serif !important;
+    font-weight: normal !important;
+    font-size: 18px !important;
+    color: #FFF !important; /* Vit text */
+    background-color: #41a48b !important; /* Mörkgrön bakgrund */
+    border-radius: 25px !important; /* Rundade kanter */
+    padding-left: 10px !important;
+    text-align: left !important; /* Texten "Alla" centrerad till vänster */
+    border: 2px solid #41a48b !important; /* Grön kant */
+    margin-top: 10px !important; /* Ökat avstånd från etiketten "Kommun" */
+}
+
+/* Stil för slider-rail (bakgrunden för sliden) */
+#homeq-web-widget .rc-slider-rail {
+    background-color: #dddddd !important; /* Ljusgrå färg för sliderbakgrunden */
+}
+
+/* Stil för slider-track (framstegen på sliden) */
+#homeq-web-widget .rc-slider-track {
+    background-color: #41a48b !important; /* Mörkgrön färg för sliderns framsteg */
+}
+
+/* Stil för slider-handle (handtaget för sliden) */
+#homeq-web-widget .rc-slider-handle {
+    border: solid 2px #41a48b !important; /* Grön kant */
+    background-color: #FFFFFF !important; /* Vit färg för sliderhandtaget */
+    border-radius: 50%; /* Rundat handtag */
+}
+
+/* Stil för pagineringsknapparna */
+#homeq-web-widget .pagination-button {
+    background-color: #ffffff !important;
+    border: solid 1px #41a48b !important; /* Grön kant */
+    border-radius: 25px !important; /* Rundade hörn */
+}
+
+/* Stil för aktiv pagineringsknapp */
+#homeq-web-widget .pagination-button-active {
+    background-color: #41a48b !important;
+    border: none !important;
+}
+
+/* Stil för texten i pagineringsknapparna */
+#homeq-web-widget .pagination-button-text {
+    color: #173a31 !important;
+}
+
+/* Stil för aktiv text i pagineringsknapparna */
+#homeq-web-widget .pagination-button-text-active {
+    color: #ffffff !important;
+}
+
+/* Stil för pagineringspunkterna */
+#homeq-web-widget .pagination-dots-container {
+    background-color: #ffffff !important;
+    border: solid 1px #dddddd !important;
+    border-radius: 25px !important; /* Rundade hörn */
+}
+
+/* Stil för pagineringspunkter */
+#homeq-web-widget .pagination-dots {
+    color: #173a31 !important;
 }
