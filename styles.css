@@ -80,7 +80,7 @@ body {
     font-weight: normal;
     border-radius: 25px;
     transition: background-color 0.3s, color 0.3s, border 0.3s;
-    margin-right: 20px; /* Ökad marginal till vänster i desktopläge */
+    margin-right: 20px; /* Ökad marginal till höger i desktopläge */
 }
 
 .nav-button.right:hover {
@@ -521,6 +521,12 @@ body {
     .logo {
         margin-left: 20px; /* Minskad marginal till vänster för loggan i mobilmode */
     }
+
+    .white-section,
+    .properties-section,
+    .service-section,
+    .about-section {
+        padding: 140px 40px; /* Minskad padding för mobilversionen */}
 
     .nav-menu {
         display: none; /* Dölj den vanliga menyn */
