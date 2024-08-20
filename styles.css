@@ -40,7 +40,7 @@ body {
     color: #41a48b; /* Mörkgrön logotext */
     font-size: 24px;
     font-weight: bold;
-    margin-left: 40px;
+    margin-left: 20px; /* Ökad marginal för desktop */
 }
 
 /* Logo styling */
@@ -80,6 +80,7 @@ body {
     font-weight: normal;
     border-radius: 25px;
     transition: background-color 0.3s, color 0.3s, border 0.3s;
+    margin-right: 20px; /* Ökad marginal till vänster i desktopläge */
 }
 
 .nav-button.right:hover {
@@ -517,11 +518,8 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .white-section,
-    .properties-section,
-    .service-section,
-    .about-section {
-        padding: 140px 40px; /* Minskad padding för mobilversionen */
+    .logo {
+        margin-left: 20px; /* Minskad marginal till vänster för loggan i mobilmode */
     }
 
     .nav-menu {
@@ -534,6 +532,7 @@ body {
 
     .menu-icon {
         display: flex; /* Visa hamburgermenyn */
+        margin-right: 20px
     }
 
     .properties-gallery {
@@ -561,4 +560,16 @@ body {
     .footer-right ul li:first-child {
         margin-bottom: 10px; /* Minska radavstånd för mobilversionen */
     }
+}
+/* Specifik stil för klickbara telefonnummer */
+.no-style-phone {
+    color: inherit; /* Matchar textfärgen med omgivande text */
+    text-decoration: none; /* Tar bort understrykning */
+}
+
+.no-style-phone:hover,
+.no-style-phone:focus,
+.no-style-phone:active {
+    color: inherit; /* Behåll samma färg vid hover, fokus och aktivt tillstånd */
+    text-decoration: none; /* Behåll ingen understrykning */
 }
