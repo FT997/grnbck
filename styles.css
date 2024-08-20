@@ -564,12 +564,10 @@ body {
 /* Specifik stil för klickbara telefonnummer */
 .no-style-phone {
     color: inherit; /* Matchar textfärgen med omgivande text */
-    text-decoration: none; /* Tar bort understrykning */
 }
 
 .no-style-phone:hover,
 .no-style-phone:focus,
 .no-style-phone:active {
     color: inherit; /* Behåll samma färg vid hover, fokus och aktivt tillstånd */
-    text-decoration: none; /* Behåll ingen understrykning */
 }
