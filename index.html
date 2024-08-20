@@ -6,6 +6,8 @@
     <title>grnbck home</title>
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="favicon.png" />
+
+    <!-- Kritisk CSS -->
     <style>
       /* Inline kritisk CSS */
       body {
@@ -62,6 +64,7 @@
         font-weight: normal;
         border-radius: 25px;
         transition: background-color 0.3s, color 0.3s, border 0.3s;
+        margin-right: 20px; /* Ökad marginal till höger i desktopläge */
       }
       .nav-button.right:hover {
         background-color: #ffffff;
@@ -126,6 +129,14 @@
         border: 2px solid #41a48b;
       }
     </style>
+
+    <!-- HomeQ Widget CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://widgets.homeq.se/widgets/overview.css"
+    />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -203,6 +214,8 @@
           class="cta-button"
           >Ställ dig i vår bostadskö</a
         >
+        <!-- HomeQ Widget -->
+        <div id="homeq-anchor" data-company="1222"></div>
       </div>
     </section>
 
@@ -400,6 +413,12 @@
         <p>&copy; 2024 grnbck home, alla rättigheter förbehållna.</p>
       </div>
     </footer>
+
+    <!-- HomeQ Widget JS -->
+    <script
+      type="application/javascript"
+      src="https://widgets.homeq.se/widgets/overview.js"
+    ></script>
 
     <!-- JavaScript for Mobile Menu -->
     <script async>
